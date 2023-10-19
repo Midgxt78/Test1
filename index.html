@@ -442,7 +442,7 @@ Skip to main content
   <div class="text-input flex">
    <input class="text-color-text font-sans text-md outline-0 bg-color-transparent grow" autocomplete="current-password" id="password" name="password" required="" type="password">
     
-      <button aria-live="assertive" id="sign-in-form__password-visibility-toggle" class="font-sans text-md font-bold text-color-action z-10 ml-[12px] hover:cursor-pointer" aria-label="Show your LinkedIn password" data-tracking-control-name="homepage-basic_sign-in-password-visibility-toggle-btn" type="button">Show</span>
+      <button aria-live="assertive" id="sign-in-form__password-visibility-toggle" class="font-sans text-md font-bold text-color-action z-10 ml-[12px] hover:cursor-pointer" aria-label="Show your LinkedIn password" data-tracking-control-name="homepage-basic_sign-in-password-visibility-toggle-btn" type="button"><span id="show-password-text" style="display: none;">Show</span>
 
         <span id="hide-password-text" style="display: inline;">Hide</span></button>
         <script>
@@ -471,8 +471,8 @@ Skip to main content
           });
           
           // Translate the button text elements
-          showPasswordTextElement.textContent = i18n_sign_in_form_show_text.innerHTML;
-          hidePasswordTextElement.textContent = i18n_sign_in_form_hide_text.innerHTML;
+          showPasswordTextElement.textContent = "Show";
+          hidePasswordTextElement.textContent = "Hide";
           </script>    
   </div>
 </div>
